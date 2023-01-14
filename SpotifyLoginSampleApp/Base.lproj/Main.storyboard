@@ -224,14 +224,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="환영합니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JyY-3s-FkH">
-                                <rect key="frame" x="139.33333333333334" y="423.66666666666669" width="114.66666666666666" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="환영합니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JyY-3s-FkH">
+                                <rect key="frame" x="139" y="408" width="114.66666666666666" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OpO-tf-2NK">
-                                <rect key="frame" x="155" y="474" width="83" height="35"/>
+                                <rect key="frame" x="155" y="513" width="83" height="35"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="로그아웃">
@@ -241,17 +241,30 @@
                                     <action selector="logoutButtonTapped:" destination="iEW-XY-9tu" eventType="touchUpInside" id="ikB-xd-50k"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pb6-de-xHF">
+                                <rect key="frame" x="24" y="458.66666666666674" width="345" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="비밀번호 변경"/>
+                                <connections>
+                                    <action selector="resetPasswordButtonTapped:" destination="iEW-XY-9tu" eventType="touchUpInside" id="jkT-WV-MGu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jN2-Ty-cqt"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="OpO-tf-2NK" firstAttribute="top" secondItem="JyY-3s-FkH" secondAttribute="bottom" constant="20" id="G7E-It-T7u"/>
+                            <constraint firstItem="OpO-tf-2NK" firstAttribute="top" secondItem="pb6-de-xHF" secondAttribute="bottom" constant="20" id="9gi-JR-33u"/>
+                            <constraint firstItem="jN2-Ty-cqt" firstAttribute="trailing" secondItem="pb6-de-xHF" secondAttribute="trailing" constant="24" id="Cxc-4T-x9S"/>
+                            <constraint firstItem="pb6-de-xHF" firstAttribute="centerX" secondItem="jN2-Ty-cqt" secondAttribute="centerX" id="Psr-J5-rEa"/>
                             <constraint firstItem="JyY-3s-FkH" firstAttribute="centerY" secondItem="jN2-Ty-cqt" secondAttribute="centerY" id="UGh-Bk-kxQ"/>
+                            <constraint firstItem="pb6-de-xHF" firstAttribute="leading" secondItem="jN2-Ty-cqt" secondAttribute="leading" constant="24" id="lxr-1L-Dna"/>
                             <constraint firstItem="JyY-3s-FkH" firstAttribute="centerX" secondItem="jN2-Ty-cqt" secondAttribute="centerX" id="raH-lT-dTl"/>
                             <constraint firstItem="OpO-tf-2NK" firstAttribute="centerX" secondItem="jN2-Ty-cqt" secondAttribute="centerX" id="roa-98-TXd"/>
+                            <constraint firstItem="pb6-de-xHF" firstAttribute="top" secondItem="JyY-3s-FkH" secondAttribute="bottom" constant="20" id="unc-9t-UUf"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="resetPasswordButton" destination="pb6-de-xHF" id="7me-Wm-N3B"/>
                         <outlet property="welcomeLabel" destination="JyY-3s-FkH" id="QTO-uQ-eoY"/>
                     </connections>
                 </viewController>

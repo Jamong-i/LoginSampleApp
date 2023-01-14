@@ -54,7 +54,6 @@
 				1B3DBB1A7193E122432B5D7C /* Pods-SpotifyLoginSampleApp.debug.xcconfig */,
 				4C77BDED8FB048E0D18F12F2 /* Pods-SpotifyLoginSampleApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
